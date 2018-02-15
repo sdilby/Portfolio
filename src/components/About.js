@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import About from './components/About';
-import './App.css';
+import App from 'C:/Users/david/OneDrive/Documents/GitHub/portfolio/src/App';
+import './About.css';
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
 
-class App extends Component {
+class About extends Component {
   constructor() {
   	super();
   	this.handleSelect = this.handleSelect.bind(this);
@@ -14,8 +14,8 @@ class App extends Component {
 
   handleSelect(selectedKey) {
     //alert(`selected ${selectedKey}`);
-
   }
+
   render() {
     return (
       <Router>
@@ -25,7 +25,7 @@ class App extends Component {
           </div>
           <div className="item item1">
             <p>I'm Sidebar #1</p>
-            <button className="navArrowLeft" onClick={this.handleSelect}> Here is an arrow <Route path="/About" component={About}/></button>
+            <button className="navArrowLeft" onClick={this.handleSelect}> Here is an arrow <Route path="/App" component={App}/></button>
           </div>
           <div className="item item2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
@@ -43,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default About;

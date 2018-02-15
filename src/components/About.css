@@ -14,7 +14,7 @@
 
 .navMenu {
   grid-area: navMenu;
-  background-color: purple;
+  background-color: blue;
 }
 
 .item1 {
