@@ -1,0 +1,52 @@
+.iconsBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  grid-template-areas:
+    ".  columnTwo columnFour  columnSix  ."
+}
+
+.columnTwo{
+  grid-area: columnTwo;
+  display: block;
+  margin: auto;
+}
+
+.fa-github {
+  color: #4078c0;
+}
+
+.columnFour{
+  grid-area: columnFour;
+  display: block;
+  margin: auto;
+}
+
+.fa-free-code-camp {
+  color: #006400;
+}
+
+.columnSix{
+  grid-area: columnSix;
+  display: block;
+  margin: auto
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+@media (max-width: 700px) {
+
+  .iconsBar {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+      "columnTwo  columnFour  columnSix"
+  }
+}
