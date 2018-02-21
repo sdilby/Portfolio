@@ -1,0 +1,18 @@
+.devName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+
+  .devName {
+    font-size: 5vw;
+  }
+
+  .jobTitle {
+    display: none;
+  }
+}

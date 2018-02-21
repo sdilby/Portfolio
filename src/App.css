@@ -1,25 +1,33 @@
-.container {
+.App {
+  background-image: url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: inset 0 0 0 1000px rgba(50, 70, 155, .7);
+
+ }
+
+.contentContainer {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 8fr 1fr;
   height: 100vh;
   grid-template-areas:
-    "navMenu    navMenu   navMenu"
-    ".          content   ."
-    "sidebar-1  content   sidebar-2"
-    "sidebar-1  content   sidebar-2"
-    "footer     footer    footer"
+    "navMenu      navMenu   navMenu"
+    "sideLeftNav  content   sideRightNav"
+    "sideLeftNav  content   sideRightNav"
+    "sideLeftNav  content   sideRightNav"
+    "footer       footer    footer"
 }
 
 .navMenu {
   grid-area: navMenu;
-  background-color: purple;
+  margin: 0px 10px 0px;
+  background: #292b2c;
 }
 
-.item1 {
-  grid-area: sidebar-1;
-  background-color: yellow;
+.sideLeftNav {
+  grid-area: sideLeftNav;
 }
 
 .navArrowLeft {
@@ -27,36 +35,46 @@
   width: 10px;
 }
 
-.item2 {
+.content {
+  padding-top: 20px;
   grid-area: content;
-  background-color: green;
 }
 
-.item3 {
-  grid-area: sidebar-2;
-  background-color: yellow;
+.sideRightNav {
+  grid-area: sideRightNav;
 }
 
 .footer {
   grid-area: footer;
-  background-color: red;
+  background-color: #292b2c;
 }
 
 
 @media (max-width: 700px) {
-  .container {
+  .App {
+    background-image: url("./img/bgMobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .contentContainer {
     display: grid;
     grid-gap: 0;
     grid-template-columns: 12fr;
     grid-template-rows: 1fr 10fr 1fr;
     height: 100vh;
+    width: 100vw;
     grid-template-areas:
       "navMenu"
       "content"
       "footer"
   }
 
-  .item1, .item3{
+  .navMenu {
+    margin: 0;
+  }
+
+  .sideLeftNav, .sideRightNav{
     display: none;
   }
 }

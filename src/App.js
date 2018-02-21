@@ -1,46 +1,33 @@
 import React, { Component } from 'react';
 import About from './components/About';
+import NavHeader from './components/NavHeader';
+import Home from './components/Home';
+import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
+import Footer from './components/Footer';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
 
-class App extends Component {
-  constructor() {
-  	super();
-  	this.handleSelect = this.handleSelect.bind(this);
-  }
 
-  handleSelect(selectedKey) {
-    //alert(`selected ${selectedKey}`);
-
-  }
-  render() {
-    return (
-      <Router>
-        <div className="container">
-          <div className="navMenu">
-            <p>I'm the navMenu</p>
-          </div>
-          <div className="item item1">
-            <p>I'm Sidebar #1</p>
-            <button className="navArrowLeft" onClick={this.handleSelect}> Here is an arrow <Route path="/About" component={About}/></button>
-          </div>
-          <div className="item item2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
-            <p>Lorem ipsum d</p>
-          </div>
-          <div className="item item3">
-            <p>I'm Sidebar #2</p>
-          </div>
-          <div className="item footer">
-            <p>I'm the footer</p>
-          </div>
-        </div>
-      </Router>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <div className="contentContainer">
+      <div className="navMenu">
+        <NavHeader/>
+      </div>
+      <div className="sideLeftNav">
+        <SidebarLeft/>
+      </div>
+      <div className="content">
+        <Home/>
+      </div>
+      <div className="sideRightNav">
+        <SidebarRight/>
+      </div>
+      <div className="footer">
+        <Footer/>
+      </div>
+    </div>
+  </div>
+)
 
 export default App;
