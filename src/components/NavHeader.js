@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
 import './CSS/NavHeader.css';
 
 
@@ -28,31 +19,25 @@ class NavHeader extends Component {
   }
   render() {
     return (
-      <Navbar dark expand="md">
-        <NavbarBrand href="/">
-          <span>Steven Dilbert</span>
-          <span className="jobTitle"> | Full Stack Web Developer</span>
-          </NavbarBrand>
-        <NavbarToggler onClick={this.toggle} />
-        <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink>About Me</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>Projects</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>Contact</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink disabled href="#">Blog - Coming soon</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-
-  );
+      <div className="menuBar">
+        <div className="devName">
+          <Link to='/'><span>Steven Dilbert</span>
+          <span className="devName jobTitle"> | Full Stack Web Developer</span></Link>
+        </div>
+          <div className="about">
+            <Link to='/About'>About Me</Link>
+          </div>
+          <div className="projects">
+            <Link to='/Projects'>Projects</Link>
+          </div>
+          <div className="contact">
+            <Link to='/Contact'>Contact</Link>
+          </div>
+          <div className="blog">
+            <Link to="#">Blog - Coming soon</Link>
+          </div>
+      </div>
+    );
   }
 }
 

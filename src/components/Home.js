@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 import './CSS/Home.css';
 
 const Home = () => (

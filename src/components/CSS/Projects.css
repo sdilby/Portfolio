@@ -1,0 +1,7 @@
+.contentContainer {
+  background-image: none;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+  justify-content: center;
+}
