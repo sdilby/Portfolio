@@ -1,52 +1,57 @@
 .menuBar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: 100%;
+  max-height: 2vh;
   width: 100%;
   grid-template-areas:
-    "devName  devName  devName  .  .  about  contact  projects  blog"
+    "devName  .  .  .  .  about  contact  projects  blog"
 }
 
-a:Link, :visited{
+a:Link {
   text-decoration: none;
   color: white;
 }
 
-Link :active, :hover {
-  text-decoration: none;
+Link, :visited{
+  color: white;
+}
+
+Link, :hover {
   color: #7f7f7f;
 }
 
+
+
 .devName {
   grid-area: devName;
+  display: inline-block;
   font-size: 20px;
   font-weight: 600;
-  margin: 10px 10px;
+  margin: 10px 0px 0px 10px;
+}
+
+.about, .contact, .projects, .blog {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 3vh 10px 0px 20px;
 }
 
 .about {
   grid-area: about;
-  display: block;
-  margin: auto;
 }
 
 .contact {
   grid-area: contact;
-  display: block;
-  margin: auto;
 }
 
 .projects {
   grid-area: projects;
-  display: block;
-  margin: auto;
 }
 
 .blog {
   grid-area: blog;
-  display: block;
-  margin: auto;
 }
 
 @media (max-width: 700px) {
